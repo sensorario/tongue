@@ -1,14 +1,14 @@
 package tongue
 
-type dict struct {
+type Dict struct {
     mappa map[string]map[string]string
 }
 
-func (d * dict) Map () map[string]map[string]string {
+func (d *Dict) Map () map[string]map[string]string {
     return d.mappa
 }
 
-func (d * dict) Add (lang string, id string, sentence string) {
+func (d *Dict) Add (lang string, id string, sentence string) {
     if d.mappa == nil {
         d.mappa = make(map[string]map[string]string)
     }
@@ -17,10 +17,10 @@ func (d * dict) Add (lang string, id string, sentence string) {
     d.mappa[lang][id] = sentence
 }
 
-func (d *dict) Get (lang string, id string) string {
+func (d *Dict) Get (lang string, id string) string {
     return d.mappa[lang][id]
 }
 
-func LoadDictionary() dict {
-    return dict{}
+func LoadDictionary() Dict {
+    return Dict{}
 }

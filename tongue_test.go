@@ -4,7 +4,6 @@ import (
 	"testing"
 	"strings"
 	"reflect"
-	"fmt"
 )
 
 func TestDictionaryCanBeLoadedByFunc(t *testing.T) {
@@ -36,8 +35,6 @@ func TestGenerateMap(t *testing.T) {
     mappa["en"]["fizz"] = "buzzz"
 
     if !reflect.DeepEqual(mappa, d.Map()) {
-        fmt.Println(mappa)
-        fmt.Println(d.Map())
         t.Fatal("Oops! Generated map is not correct")
     }
 }

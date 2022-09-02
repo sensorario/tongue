@@ -1,3 +1,4 @@
 package tongue
 
-
+func LoadDictionary() {
+}

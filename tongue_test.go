@@ -46,7 +46,6 @@ func TestReturnTranslation(t *testing.T) {
     d.Add("en", "foo", "barr")
     d.Add("en", "fizz", "buzzz")
 
-
     if d.Get("it", "foo") != "bar" {
         t.Fatal("Oops! Wrong translation found")
     }
